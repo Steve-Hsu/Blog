@@ -1,0 +1,172 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption,
+tbody, tfoot, thead, tr, th, td, article, aside,
+canvas, details, embed, figure, figcaption, footer,
+header, hgroup, menu, nav, output, ruby, section,
+summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+strong, b {
+  font-weight: bold;
+}
+em, i {
+  font-style: italic;
+}
+a img {
+  border: none;
+}
+/* END RESET*/
+
+/* ---Global Styles--- */
+html {
+  font-style: italic;
+  font-family: 'Open Sans Condensed', sans-serif;
+
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+
+}
+
+h1 {
+  font-size: 5vw;
+  margin-top: 0;
+}
+
+/* ---territory styles--- */
+.bodycontainer {
+  display: flex;
+  overflow: scroll;
+}
+
+.element {
+  flex: 1 1 0;
+  padding: 10vh;
+  height: 1200px;
+  color: rgb(0,0,0);
+}
+
+.footer {
+  display: flex;
+  height: 10vh;
+  width: auto;
+  bottom:0px;
+  position: static;
+  background-color: yellow;
+  flex: 1 1 1;
+}
+
+.header {
+  height:10%;
+  min-height: 70px;
+  width: 100vw;
+  top:0px;
+  position: fixed;
+  background-color: orange;
+  z-index: 20;
+}
+
+/* Header settings */
+.header-list {
+  top : 50%;
+  list-style: none;
+  transform: translate(-0.5em,-0.5em);
+  float: right;
+  position: relative;
+
+}
+.header-list > li {
+  display: inline-block;
+  padding:  0px 5px;
+}
+
+.headertitle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-20vw, -2.5vw);
+
+}
+
+.header-images {
+  height: 80%;
+  transform: translate(5px, 5px);
+}
+
+/* dropdown */
+.drop-trigger {
+  display: inline-block;
+  padding-right: 1.5em;
+  position: relative;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown:hover .drop-menu {
+  display: block;
+}
+
+.drop-trigger:after {
+  border: 0.3em solid;
+  border-color: #fff transparent transparent;
+  content:"";
+  height: 0;
+  position: absolute;
+  right: 0;
+  top: 0.3em;
+  width: 0;
+}
+
+.drop-menu {
+  display: none;
+  list-style: none;
+  padding: 1em 0 0;
+  width: 20px;
+  position: absolute;
+  right: 0;
+  z-index: 9;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+}
+
+.drop-menu li {
+  background-color: white;
+}
+
+.drop-menu a {
+  color: #333;
+  display: block;
+}
